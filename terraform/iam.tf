@@ -9,7 +9,7 @@ resource "aws_iam_role" "amplify_service_role" {
         Principal = {
           Service = [
             "amplify.amazonaws.com",
-            "amplify.us-west-1.amazonaws.com"
+            "amplify.us-west-2.amazonaws.com"
           ]
         }
         Action = "sts:AssumeRole"
