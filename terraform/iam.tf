@@ -2,13 +2,16 @@ resource "aws_iam_role" "amplify_service_role" {
   name = "AmplifyServiceRole"
 
   assume_role_policy = jsonencode({
-    Version = "2012-10-17",
+    Version = "2012-10-17"
     Statement = [
       {
-        Effect = "Allow",
+        Effect = "Allow"
         Principal = {
-          Service = "amplify.amazonaws.com"
-        },
+          Service = [
+            "amplify.amazonaws.com",
+            "amplify.us-west-1.amazonaws.com"
+          ]
+        }
         Action = "sts:AssumeRole"
       }
     ]
