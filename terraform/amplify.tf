@@ -30,11 +30,11 @@ resource "aws_amplify_branch" "main" {
 }
 
 resource "aws_amplify_domain_association" "custom_domain" {
-  app_id = aws_amplify_app.jeffjing.id
+  app_id      = aws_amplify_app.jeffjing.id
   domain_name = "jeffjing.dev"
 
   sub_domain {
     branch_name = aws_amplify_branch.main.branch_name
-    prefix      = ""  # root domain
+    prefix      = "" # root domain
   }
 }
