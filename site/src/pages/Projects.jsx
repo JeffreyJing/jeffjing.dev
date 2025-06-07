@@ -34,7 +34,9 @@ export default function ProjectsCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+<>
+  <h1 className="text-6xl font-extrabold text-center my-12 text-white">My Projects</h1>
+  <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
       <button
         onClick={prev}
         className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-20 bg-black rounded-full w-10 h-10 flex items-center justify-center border-none"
@@ -82,8 +84,8 @@ export default function ProjectsCarousel() {
         className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-20 bg-black rounded-full w-10 h-10 flex items-center justify-center border-none"
       >
         <span className="text-black">▶</span>
-      </button>
-    </div>
-  );
+      </button>  </div>
+</>
+);
 }
 

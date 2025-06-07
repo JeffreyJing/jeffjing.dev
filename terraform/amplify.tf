@@ -34,7 +34,13 @@ resource "aws_amplify_domain_association" "custom_domain" {
   domain_name = "jeffjing.dev"
 
   sub_domain {
+    branch_name = "main"
+    prefix      = ""  # root domain
+  }
+
+  sub_domain {
     branch_name = aws_amplify_branch.main.branch_name
     prefix      = "www"
   }
+
 }
