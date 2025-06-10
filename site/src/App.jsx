@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import NavItem from "./components/NavItem";
 
@@ -12,7 +12,7 @@ export default function App() {
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
     { to: "/projects", label: "Projects" },
-    { to: "/for-recruiters", label: "For Recruiters"},
+    { to: "/for-recruiters", label: "For Recruiters" },
   ];
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,15 +23,19 @@ export default function App() {
         {/* Navbar */}
         <nav className="w-full bg-black px-4 py-4 shadow z-10">
           <div className="flex justify-between items-center">
-            <div className="text-xl md:text-2xl font-bold text-white">jeffjing.dev</div>
+            <Link to="/" className="text-xl md:text-2xl font-bold text-white">
+              jeffjing.dev
+            </Link>
+
+            {/* Hamburger */}
             <button
-  className="bg-gray-800 !bg-gray-800 text-white p-2 rounded-md md:hidden border border-gray-700 hover:!bg-gray-700"
-  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
->
-  ☰
-</button>
+              className="text-white text-3xl p-3 bg-gray-800 rounded-md md:hidden hover:bg-gray-700"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              ☰
+            </button>
 
-
+            {/* Desktop nav */}
             <div className="hidden md:flex gap-6">
               {navLinks.map((link) => (
                 <NavItem key={link.to} to={link.to} label={link.label} />
@@ -39,7 +43,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* Mobile menu */}
+          {/* Mobile dropdown nav */}
           {mobileMenuOpen && (
             <div className="flex flex-col gap-4 mt-4 md:hidden">
               {navLinks.map((link) => (
