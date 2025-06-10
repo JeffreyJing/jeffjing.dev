@@ -1,8 +1,16 @@
+import { useState } from "react";
 import Layout from "../components/Layout";
 import FlipCard from "../components/FlipCard";
 import FeedbackForm from "../components/FeedbackForm";
 
 export default function Recruiters() {
+  const [showBanner, setShowBanner] = useState(false);
+
+  const handleSuccess = () => {
+    setShowBanner(true);
+    setTimeout(() => setShowBanner(false), 3000);
+  };
+
   const feedbackText = `Rejection letters are incredibly common in today's job market—especially given the current economic climate—but they almost always come in the form of generic, automated messages.
 
 As an applicant, it's frustrating to receive the same vague response hundreds of times, with no idea what went wrong. That's why I created this form!
@@ -19,7 +27,13 @@ If you have questions about my qualifications or background, feel free to ask aw
 
   return (
     <Layout>
-      <div className="w-full flex flex-col items-center pt-12 px-4 pb-24">
+      <div className="w-full flex flex-col items-center pt-12 px-4 pb-24 relative">
+        {showBanner && (
+          <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg z-50 transition-opacity duration-500 ease-in-out">
+            Feedback submitted successfully!
+          </div>
+        )}
+
         <h1 className="text-4xl font-bold mb-4 text-center">For Recruiters</h1>
         <p className="text-lg text-gray-300 max-w-xl text-center mb-12">
           Welcome! This space is built just for you. Here you can interact with an LLM trained on my work history, leave feedback, and learn more about how I work.
@@ -29,7 +43,7 @@ If you have questions about my qualifications or background, feel free to ask aw
           <FlipCard
             frontTitle="Did I apply for your job opening? How'd I do?"
             frontContent={feedbackText}
-            backContent={(flipBack) => <FeedbackForm onSuccess={flipBack} />}
+            backContent={(flipBack) => <FeedbackForm onSuccess={() => { handleSuccess(); flipBack(); }} />}
             buttonLabel="Give Feedback"
           />
 

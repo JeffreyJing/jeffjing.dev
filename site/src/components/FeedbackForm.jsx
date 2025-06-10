@@ -10,8 +10,6 @@ export default function FeedbackForm({ onSuccess }) {
     finalThoughts: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -26,11 +24,8 @@ export default function FeedbackForm({ onSuccess }) {
         body: JSON.stringify(formData),
       });
 
-
       if (res.ok) {
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 3000); // remove message after 3s
-        setTimeout(() => onSuccess(), 500); // flip card back after short delay
+        onSuccess(); // Recruiters will handle the banner + flip
         setFormData({
           company: "",
           resumeRating: "",
@@ -49,12 +44,6 @@ export default function FeedbackForm({ onSuccess }) {
 
   return (
     <form className="flex flex-col gap-4 text-sm" onSubmit={handleSubmit}>
-      {submitted && (
-        <div className="bg-green-500 text-white px-4 py-2 rounded mb-2 text-center font-semibold transition-opacity duration-500 ease-in-out">
-          Feedback sent!
-        </div>
-      )}
-
       <label>
         What company are you with?
         <input name="company" value={formData.company} onChange={handleChange} type="text" className="mt-1 w-[95%] mx-auto border border-gray-300 rounded px-3 py-2" />
