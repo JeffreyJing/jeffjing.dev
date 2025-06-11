@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import NavItem from "./components/NavItem";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -67,6 +68,9 @@ export default function App() {
             <Route path="/for-recruiters" element={<Recruiters />} />
           </Routes>
         </main>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );

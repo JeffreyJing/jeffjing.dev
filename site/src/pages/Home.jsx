@@ -70,6 +70,16 @@ export default function Home() {
       <div className="bg-gray-900 text-white mt-[-24px] px-6 py-6 rounded-2xl shadow-lg w-full max-w-3xl text-xl leading-relaxed text-center mb-32">
         <p className="mb-4">I specialize in building reliable, scalable infrastructure for modern cloud-native applications. I care about clean automation, robust CI/CD, and making things easy to maintain.</p>
         <p className="mb-4 font-semibold">And yes, I am currently looking for a job in the space!</p>
+        <p className="mb-4">
+          <a
+            href="/resume.pdf"
+            download
+            className="text-green-400 underline hover:text-green-300"
+          >
+            Click to grab a copy of my resume.
+          </a>
+        </p>
+
         <p className="mb-4">Feel free to look around and <a href="/about" className="text-green-400 underline hover:text-green-300">get to know me</a>!</p>
         <p><span className="font-semibold">Are you considering me for a role?</span> Feel free to visit the <a href="/for-recruiters" className="text-green-400 underline hover:text-green-300">recruiter page</a> I designed just for you!</p>
       </div>
