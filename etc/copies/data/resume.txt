@@ -1,0 +1,103 @@
+JEFFREY JING  
+DevOps Engineer | Cloud Infrastructure Specialist | Certified Kubernetes Administrator (CKA)  
+Phone: 626-241-8731 | Email: jjingdn@gmail.com | LinkedIn: linkedin.com/in/jeffrey-jing97  
+
+---
+
+🏫 EDUCATION  
+University of Washington – Seattle, WA  
+Bachelor of Arts in Geographic Information Systems (GIS), June 2020  
+- Completed rigorous coursework in Computer Science (CSE 142, 143, 331, 341, 351, 374)  
+- Classically trained in Java; it remains my primary language for problem solving and design thinking  
+
+---
+
+🎓 CERTIFICATIONS  
+• Certified Kubernetes Administrator (CKA), issued February 2025  
+
+---
+
+💼 EXPERIENCE  
+
+🔹 CASTLE HILL GAMING | DevOps Engineer  
+Charlottesville, VA | 2023 – 2024  
+
+- Automated management of Gherkin-based QA test repositories by building a centralized, queryable Flask API with webhook-driven sync logic. Eliminated manual repo versioning and enabled developers to retrieve the latest test sets dynamically during CI runs.
+- Spearheaded an internal Docker migration to replace the legacy pattern of packaging custom binaries per EC2 instance. Designed reproducible, containerized development environments that dramatically reduced costs, onboarding time, and configuration drift.
+- Manually deployed Prometheus + Grafana on each EC2 instance (no Kubernetes used); installed and configured Node Exporters, set up scrape targets, and built real-time dashboards for system observability and performance alerts.
+- Built a reusable Microsoft Teams bot using OAuth 2.0 and Microsoft Graph API to deliver build results, Git status, and test errors to Teams channels. The bot was adopted company-wide and improved visibility into CI/CD health.
+- Created a reservation interface for managing physical Electronic Gaming Machines (EGMs) using Flask, Apache2, and Python-based SVGs for interactive layouts. Enabled QA engineers to visually book hardware and track availability in real time.
+- Launched a Dropbox + EC2 cost-cutting initiative that identified unused storage and over-provisioned compute nodes. Redesigned resource allocation and archive retention policies, cutting infrastructure spend by over 65%.
+- Investigated a runaway EC2 test instance that had been duplicating 20TB/day of production and staging data into S3 for over a year. Wrote a corrective ingestion script and a deduplication process that purged over 100TB of redundant storage, restoring system integrity and halting wasteful cronjobs.
+- Managed CI/CD using TeamCity across Windows-hosted EC2 build agents. Gained deep familiarity with how ephemeral agents integrate with GitLab and GitHub triggers. Rebuilt pipeline triggers and webhooks during a company-wide GitHub → GitLab migration with zero downtime.
+- Replicated a Jenkins-based build pipeline for self-study to contrast CI platforms. Though not used in production, this project enhanced theoretical knowledge of Jenkins node orchestration and job lifecycle patterns.
+- Built a frontend+backend QA Test Submission tool using Flask (Python), JavaScript, and custom CSS. Allowed developers to submit bug reports and test artifacts directly to QA, which auto-logged into Jira through API integration, improving ticket hygiene and triage speed.
+
+---
+
+🔹 ETHFINITY STUDIOS | Software & DevOps Engineer  
+Seattle, WA | 2021 – 2023  
+
+- Acted as CEO and project lead for Metapengus, a large-scale NFT launch on Ethereum. Directed all aspects of the project: smart contract architecture, website development, marketing strategy, community building, and art production.
+- Personally sourced, onboarded, and coordinated contractors across smart contract development, frontend work, community moderation, and outreach; led the team from concept to execution.
+- Taught myself Photoshop from scratch to design the full art collection, including base layers and randomized traits for 1,000+ NFTs — an intense, hands-on process blending creativity with generative logic.
+- Built the smart contracts in Solidity (ERC721 and custom logic) and was fully responsible for testing using Hardhat and Chai. Handled all deployment and contract verification.
+- Created the minting frontend and integrated Web3 wallet functionality using React and ethers.js; hosted the app on AWS (S3 + CloudFront).
+- Personally developed the community Discord from the ground up, implemented bot automations, and recruited a trusted mod team to manage growth and community engagement.
+- Devised a targeted marketing campaign across Twitter, Discord, and NFT forums, helping generate hype and sustain momentum during the mint.
+- Oversaw launch operations, from technical stress testing to community Q&A, ensuring a smooth rollout and high user confidence.
+- Contributed to additional projects under Ethfinity Studios, including Deck of Degeneracy and others, supporting smart contract development, site deployment, and post-launch maintenance.
+
+---
+
+🔹 PATHWARE | Software Development Engineer Intern  
+Seattle, WA | 2020  
+
+- Wrote a Python-based parser for Doxygen documentation to streamline codebase annotation and improve internal documentation reliability.
+- Built an advanced image processing module in C++ and Java to support Fourier Ptychographic Microscopy (FPM) — implemented novel reconstruction algorithms to enhance image fidelity for medical and scientific applications.
+
+---
+
+🧠 SKILLS & TECHNOLOGIES  
+
+☁ DevOps / Cloud / Automation  
+- **Kubernetes**: Used EKS for production-level deployments and Minikube for local testing. Comfortable with manifest authoring, RBAC, and Helm/Kustomize templating.  
+- **Helm & Kustomize**: Used to manage layered K8s configurations across dev/staging/prod.  
+- **Docker**: Containerized legacy internal tools and developer environments to streamline CI pipelines and enforce consistency across machines.  
+- **CI/CD**: Managed TeamCity pipelines with EC2 agents, integrated GitHub Actions for lightweight jobs, and built GitLab CI pipelines with webhook triggers.  
+- **AWS**:  
+  - EC2: Deployed monitoring, CI agents, and workloads  
+  - S3: Hosted NFT assets and data pipelines  
+  - Lambda: Built serverless APIs for form handling  
+  - RDS: Used for PostgreSQL in infrastructure-as-code setups  
+  - Amplify: Hosted personal React portfolio with domain + certs  
+  - Route 53: Managed DNS for jeffjing.dev  
+  - CloudFront: Delivered static frontends  
+  - IAM: Configured least-privilege roles across services  
+- **Terraform**: Used daily for provisioning infrastructure (EKS, RDS, Lambda, IAM, etc.); comfortable with modules, remote state, and environment branching.  
+- **Prometheus & Grafana**: Installed from scratch on EC2 (non-K8s). Manually set up Node Exporters and scrape configs; built real-time dashboards.  
+- **Flask & Apache2**: Built multiple internal web apps (hardware checkout, QA form) with REST endpoints and lightweight HTML+JS interfaces.  
+
+💻 Programming & Scripting Languages  
+- **Java**: Classically trained; primary language for systems thinking  
+- **Python**: Used across internal tools, APIs, and automation scripts  
+- **Bash**: Daily usage for scripting and server-side automation  
+- **Solidity**: Authored smart contracts with custom logic  
+- **C++**: Used in imaging research context  
+
+🔧 Tools & Platforms  
+- Git, GitHub, GitLab, Jira, Remix IDE, Hardhat, Doxygen, Microsoft Graph API, Jenkins (theoretical)
+
+🏅 Strengths  
+- Designs resilient cloud-native infrastructure  
+- Obsessed with reducing developer friction via automation  
+- Learns new tools rapidly and applies them in production  
+- Operates across DevOps, backend, infra, QA, and smart contracts  
+
+---
+
+🌐 Projects & Personal Initiatives  
+[See `projects.txt` for detailed descriptions]  
+- Terraform-based EKS & RDS deployment  
+- Personal site with RAG-powered recruiter assistant (jeffjing.dev)  
+- GitHub-hosted K8s dashboard project (minikube-dashboard)
