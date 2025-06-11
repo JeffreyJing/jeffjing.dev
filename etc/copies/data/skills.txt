@@ -1,0 +1,103 @@
+🛠 DEVOPS & CLOUD  
+
+• Kubernetes (EKS, Minikube)  
+  - Used EKS for real-world Terraform-managed infrastructure with Helm/Kustomize, RDS integration, and CI/CD readiness  
+  - Used Minikube for local dashboards, testing workloads, and visualizing cluster state for educational demos  
+
+• Terraform  
+  - Daily driver for provisioning AWS services (Amplify, Lambda, S3, RDS, API Gateway, IAM, Route 53)  
+  - Experienced with state file management, modular codebases, and cross-environment isolation  
+
+• Docker  
+  - Replaced legacy EC2 binary setups at Castle Hill Gaming by containerizing internal tools and testing environments  
+  - Ensured reproducibility, cost efficiency, and developer onboarding consistency  
+
+• AWS  
+  - **EC2**: Hosted TeamCity agents, monitoring stacks, and legacy tools  
+  - **S3**: Used for persistent storage (feedback, NFT metadata, dashboards)  
+  - **Lambda**: Handled form submission ingestion, integrated with API Gateway  
+  - **RDS**: PostgreSQL backend for Terraform-deployed Kubernetes workloads  
+  - **Amplify**: Hosted frontend for jeffjing.dev with GitHub CI/CD  
+  - **Route 53**: Managed DNS routing for domains  
+  - **ACM**: Configured HTTPS certificates  
+  - **IAM**: Designed secure, least-privilege roles for services and Lambda  
+
+• CI/CD  
+  - Managed TeamCity pipelines triggered by GitHub/GitLab, backed by EC2 agents  
+  - Used GitHub Actions for lightweight builds and site deploys  
+  - Theoretically familiar with Jenkins job orchestration and agent setup  
+
+• Monitoring  
+  - Deployed Prometheus and Grafana manually on EC2 (non-K8s), including custom scrape configs and dashboards  
+  - Used Node Exporters to monitor non-containerized infrastructure  
+
+• Web Infra  
+  - Built production Flask+Apache2 apps (hardware checkout, QA tools)  
+  - Managed deployments, route security, and performance tuning  
+
+---
+
+🎓 CERTIFICATIONS & DEEP TRAINING  
+
+• Certified Kubernetes Administrator (CKA) — earned February 2025  
+  - Spent months mastering core Kubernetes concepts, workflows, and edge cases  
+  - Learned to deploy, inspect, and troubleshoot clusters manually (kubectl, kubeadm, kubelet, etc.)  
+  - Proficient in writing and debugging manifest files for pods, services, network policies, and volumes  
+  - Gained deep comfort with `journalctl` and `systemctl` for node-level troubleshooting (e.g. static pod failures, kubelet logs)  
+  - Developed fluency in debugging misconfigured RBAC, service discovery, and node health issues  
+  - Regularly worked with Helm charts and Kustomize overlays to deploy complex, multi-component apps  
+  - Understands etcd restoration, backup strategies, and security policies under CKA exam constraints  
+  - Capable of cluster backup, restore, TLS cert management, and basic control plane operations
+
+---
+
+💻 PROGRAMMING & SCRIPTING LANGUAGES  
+
+• Java  
+  - Classically trained and fluent; think and design in Java even when using other languages  
+
+• Python  
+  - Used for APIs, SVG rendering, snapshot generation, and Flask backends  
+
+• Solidity  
+  - Authored and tested dozens of smart contracts (ERC721, ERC721B, ERC1155) using Hardhat and Chai  
+
+• Bash  
+  - Wrote daily-use scripts for deployment, automation, and system checks  
+
+• C++  
+  - Used for image processing and scientific tooling during Pathware internship  
+
+---
+
+🔧 TOOLS & INTEGRATIONS  
+
+• Git, GitHub, GitLab  
+  - Daily usage for version control, CI/CD, and repo automation  
+
+• Jira API  
+  - Connected form-based tools to issue tracker for automatic triage  
+
+• Microsoft Graph API  
+  - Built company-wide CI notification bot for Microsoft Teams  
+
+• Remix IDE  
+  - Used for Solidity contract debugging, deployment, and bytecode inspection  
+
+• Hardhat + Chai  
+  - Authored smart contract tests, built full deployment pipelines  
+
+• Photoshop  
+  - Designed generative art assets for NFT collection from scratch  
+
+• JSON, SVG, REST  
+  - Used for data pipelines, visual layout rendering, and frontend/backend integration  
+
+---
+
+💡 STRENGTHS  
+
+• Learns new tools quickly and deploys them in production with confidence  
+• Blends software engineering and infrastructure expertise seamlessly  
+• Proactive about reducing operational overhead via tooling and automation  
+• Strong communicator, self-starter, and team builder — proven in both startups and structured environments  

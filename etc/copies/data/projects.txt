@@ -1,0 +1,96 @@
+▶ Metapengus (NFT Launch Project)  
+Led as CEO and technical founder of Metapengus, a 1,000+ item NFT collection on Ethereum. Personally directed every phase of the project: building the contracts, designing the art, deploying the minting site, hiring mods, and launching the community. Taught myself Photoshop from scratch to design layered generative traits and structured the metadata pipeline. Wrote and audited custom ERC721 contracts using Solidity and Hardhat, with full testing and deployment responsibility.
+
+Developed the minting frontend in React and integrated ethers.js wallet functionality. Hosted the static site on AWS S3 and served it via CloudFront. Managed Discord growth, created bots, and coordinated pre-launch marketing across Twitter and NFT communities. Successfully launched with over $2M in primary sales.
+
+Tools Used:  
+- Solidity + Hardhat: Smart contract logic, minting, and on-chain metadata  
+- React + ethers.js: Built the minting frontend and wallet integration  
+- AWS S3 + CloudFront: Hosted frontend and NFT asset delivery  
+- Photoshop: Designed all art layers for the collection  
+- Discord: Built and managed community infrastructure with custom bots  
+- Git: Version control across contracts and frontend  
+
+Role: CEO, smart contract author, full-stack builder, community & ops lead  
+
+---
+
+▶ jeffjing.dev (Personal Site with RAG Assistant)  
+Designed and deployed a full-stack personal site using React + Tailwind, hosted via AWS Amplify, with domain management via Route 53 and HTTPS certs from ACM. Provisioned every piece of infrastructure using Terraform. Developed a custom recruiter-facing assistant using OpenAI’s embedding API, a FAISS index, and a Lambda-based query backend that performs vector search over your resume, skills, and project history.
+
+Built a Lambda POST endpoint triggered via API Gateway that accepts feedback form data and appends it to a centralized S3 object. Faced and resolved regional deployment issues (notably a build failure bug in us-west-1) by migrating and rebuilding all resources in us-east-1. Learned the critical role of `.tfstate` files after early trial-and-error with state loss and resource duplication.
+
+Terraform Resources Used:  
+- aws_amplify_app.site  
+- aws_amplify_branch.site_branch  
+- aws_amplify_domain_association.site_domain  
+- aws_s3_bucket.feedback_store  
+- aws_lambda_function.jeff_feedback  
+- aws_iam_role.lambda_exec  
+- aws_apigatewayv2_api.feedback_api  
+- aws_apigatewayv2_integration.lambda_integration  
+- aws_apigatewayv2_route.feedback_route  
+- aws_apigatewayv2_stage.prod_stage  
+- aws_route53_record.www_alias  
+- aws_acm_certificate.cert  
+
+Tools Used:  
+- React + Tailwind: Frontend site with recruiter terminal + RAG assistant UI  
+- AWS Amplify: Hosts static frontend and manages CI/CD from GitHub  
+- Route 53 + ACM: DNS and HTTPS certs for custom domain  
+- AWS Lambda + API Gateway: Serverless POST endpoint for form data  
+- S3: Persistent storage for feedback and model context  
+- OpenAI + FAISS: Embedded resume/project data, exposed via GPT API  
+- Terraform: Provisioned all services end-to-end  
+
+Role: Full-stack dev, infra lead, RAG/GPT integration architect  
+
+---
+
+▶ EKS & RDS with Terraform (Production Infra Project)  
+Provisioned a robust, modular AWS infrastructure stack using Terraform. Deployed an EKS cluster with autoscaling node groups and full IAM role mapping. Attached a PostgreSQL instance via RDS for persistent backend workloads. Used Helm and Kustomize to deploy Kubernetes workloads, with templated secrets and layered environments. Observability was set up using Prometheus scrape configs and Grafana dashboards.
+
+This project served as a sandbox to simulate real-world, production-grade deployments with clean separation of concerns and reusable IaC modules. All components were validated manually using `kubectl`, Terraform `plan/apply`, and Prometheus metrics.
+
+Tools Used:  
+- Terraform: Defined infrastructure (EKS, RDS, IAM roles, VPCs) as modular reusable code  
+- EKS: Hosted K8s workloads with autoscaling and node group tuning  
+- RDS: PostgreSQL database backend for persistent storage  
+- Helm + Kustomize: Managed app configuration with reusable templates  
+- Prometheus + Grafana: Monitoring stack with scrape targets and dashboards  
+- IAM: Defined least-privilege access policies for all roles  
+
+Role: Infra architect, DevOps lead  
+
+---
+
+▶ minikube-dashboard (Kubernetes Visualization Project)  
+Built a developer-facing dashboard to visualize workloads, logs, and system state in a local Minikube cluster. Designed the interface using raw HTML/CSS/JS, later migrated to Tailwind for theming. Hosted the final version on GitHub Pages.
+
+Faced infrastructure availability issues: the site relied on Flask querying Minikube in real time, but broke if Flask or Minikube was down. To solve this, implemented a snapshot system: Flask exports the live state as JSON, which gets committed to the React repo and rendered statically, enabling persistent uptime and semi-live views.
+
+Tools Used:  
+- Kubernetes (Minikube): Local dev cluster to simulate production workloads  
+- Flask: Queried cluster state and generated snapshots  
+- React: Display layer for structured JSON cluster state  
+- Tailwind: Styling for consistent visual hierarchy  
+- GitHub Pages: Static site host  
+- JSON: Snapshot format for data preservation  
+
+Role: Solo dev, K8s visualizer, reliability problem-solver  
+
+---
+
+▶ Internal Tools @ Castle Hill Gaming  
+Developed multiple internal web tools to streamline QA and engineering workflows. Built a Flask + Apache2 reservation system for physical EGM hardware using Python-based SVG rendering for floor layout UI. Built a separate submission tool for developers to log test cases and bugs into Jira via API, improving visibility and test traceability.
+
+Led containerization of legacy scripts and tools using Docker, replacing previously unmanaged per-EC2 binaries. Built and deployed a Microsoft Teams bot using OAuth2 and Graph API to notify developers of build status and CI failures — eventually adopted across the company.
+
+Tools Used:  
+- Flask + Apache2: Built scalable internal tools with REST APIs  
+- Python + SVG: Rendered interactive EGM layout maps for hardware management  
+- Docker: Containerized developer tooling for consistent builds and onboarding  
+- Microsoft Graph API: Delivered real-time CI/CD build alerts to Teams  
+- Jira API: Connected bug/test forms to issue tracker  
+
+Role: Internal tools dev, CI/CD pipeline extender, QA enabler
