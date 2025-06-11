@@ -32,8 +32,8 @@ resource "aws_lambda_function" "llm_handler" {
   runtime       = "python3.11"
   role          = aws_iam_role.lambda_exec.arn
 
-  filename         = "${path.module}/../etc/lambda_llm.zip"
-  source_code_hash = filebase64sha256("${path.module}/../etc/lambda_llm.zip")
+  filename         = "${path.module}/../etc/llm_lambda.zip"
+  source_code_hash = filebase64sha256("${path.module}/../etc/llm_lambda.zip")
 
   environment {
     variables = {

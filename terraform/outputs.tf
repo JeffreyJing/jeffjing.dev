@@ -14,5 +14,5 @@ output "llm_api_url" {
 
 output "llm_lambda_hash" {
   description = "Hash of the LLM Lambda zip file to force updates when it changes"
-  value       = filebase64sha256("${path.module}/../etc/lambda_llm.zip")
+  value       = filebase64sha256("${path.module}/../etc/llm_lambda.zip")
 }

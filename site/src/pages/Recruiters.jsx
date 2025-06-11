@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "../components/Layout";
 import FlipCard from "../components/FlipCard";
 import FeedbackForm from "../components/FeedbackForm";
+import ChatBox from "../components/ChatBox";
 
 export default function Recruiters() {
   const [showBanner, setShowBanner] = useState(false);
@@ -50,9 +51,16 @@ If you have questions about my qualifications or background, feel free to ask aw
           <FlipCard
             frontTitle="Questions about my qualifications? Ask GPT!"
             frontContent={llmText}
-            backContent={<div className='text-black'>[ GPT chat UI goes here ]</div>}
+            backContent={
+              <div className="w-full flex justify-center">
+                <ChatBox />
+              </div>
+            }
             buttonLabel="Ask a Question"
+            noScroll
           />
+
+
         </div>
       </div>
     </Layout>
