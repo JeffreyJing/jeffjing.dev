@@ -2,7 +2,7 @@
 resource "aws_lambda_function" "form_handler" {
   function_name = "jjingdev-site-feedback-handler"
   role          = aws_iam_role.lambda_exec.arn
-  handler       = "handler.lambda_handler"
+  handler       = "form_handler.lambda_handler"
   runtime       = "python3.12"
   filename      = "${path.module}/../etc/form_lambda.zip"
   source_code_hash = filebase64sha256("${path.module}/../etc/form_lambda.zip")
@@ -27,7 +27,7 @@ resource "aws_lambda_permission" "form_apigw_invoke" {
 
 # === LLM Recruiter Chat Lambda ===
 resource "aws_lambda_function" "llm_handler" {
-  function_name = "llm-handler-v4"
+  function_name = "llm-handler-v5"
   handler       = "llm_handler.handler"
   runtime       = "python3.11"
   role          = aws_iam_role.lambda_exec.arn

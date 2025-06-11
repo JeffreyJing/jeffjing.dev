@@ -25,6 +25,7 @@ export default function About() {
         <p className="text-lg text-gray-300 max-w-2xl text-center mb-12">
           Get to know me beyond the resume—this is where I share the things I love:
           the routines that keep me grounded, the games and music I escape to, and the random quirks that make me who I am.
+          This page isn't yet completed, so feel free to come back in a couple days to see new features!
         </p>
 
         <div className="w-full max-w-2xl space-y-10">
