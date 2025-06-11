@@ -85,7 +85,7 @@ export default function FeedbackForm({ onSuccess }) {
         <textarea name="finalThoughts" value={formData.finalThoughts} onChange={handleChange} className="mt-1 w-[95%] mx-auto border border-gray-300 rounded px-3 py-2" rows="2" />
       </label>
 
-      <div className="mt-4 flex justify-center">
+      <div className="mt-1 -mb-1 sm:mb-0 flex justify-center">
         <button
           type="submit"
           className="bg-black text-white rounded-full px-6 py-3 font-semibold hover:bg-gray-800 transition"
@@ -93,6 +93,7 @@ export default function FeedbackForm({ onSuccess }) {
           Submit
         </button>
       </div>
+
     </form>
   );
 }

@@ -38,7 +38,7 @@ export default function ChatBox() {
   }, [chatHistory, loading]);
 
   return (
-    <div className="flex flex-col w-full max-w-full rounded-xl overflow-hidden shrink-0 h-full sm:h-[50vh]">
+    <div className="flex flex-col w-full max-w-full rounded-xl overflow-hidden shrink-0 h-[77vh] sm:h-[62vh]">
       <div
         ref={chatContainerRef}
         className="flex-1 overflow-y-auto p-4 space-y-4 bg-white"
