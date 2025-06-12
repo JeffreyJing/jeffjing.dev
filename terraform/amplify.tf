@@ -3,25 +3,25 @@ resource "aws_amplify_app" "jeffjing" {
   repository = "https://github.com/JeffreyJing/jeffjing.dev"
   oauth_token = var.github_token
 
-  build_spec = <<YAML
+    build_spec = <<YAML
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        - cd site
-        - npm ci || true
+        - npm ci
     build:
       commands:
-        - npm run build || true
+        - npm run build
   artifacts:
-    baseDirectory: site/build
+    baseDirectory: build
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
 YAML
+
 }
 
 resource "aws_amplify_branch" "main" {
