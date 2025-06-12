@@ -17,7 +17,7 @@ export default function FlipCard({ frontTitle, frontContent, backContent, button
   };
 
   return (
-    <div className="relative w-full md:w-[700px] h-[650px] sm:h-[600px] perspective">
+    <div className="relative w-full md:w-[700px] h-[80vh] sm:h-[65vh] perspective">
       <div
         className="w-full h-full relative"
         style={{ ...cardStyle, transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
