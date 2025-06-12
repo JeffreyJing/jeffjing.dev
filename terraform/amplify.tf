@@ -9,17 +9,18 @@ frontend:
   phases:
     preBuild:
       commands:
+        - cd site
         - npm install
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: build
+    baseDirectory: site/build
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/*
+      - site/node_modules/**/*
 YAML
 
 }
