@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 
 export default function Home() {
@@ -80,8 +81,14 @@ export default function Home() {
           </a>
         </p>
 
-        <p className="mb-4">Feel free to look around and <a href="/about" className="text-green-400 underline hover:text-green-300">get to know me</a>!</p>
-        <p><span className="font-semibold">Are you considering me for a role?</span> Feel free to visit the <a href="/for-recruiters" className="text-green-400 underline hover:text-green-300">recruiter page</a> I designed just for you!</p>
+        <p className="mb-4">Feel free to look around and <Link to="/about" className="text-green-400 underline hover:text-green-300">get to know me</Link>!</p>
+        <p>
+          <span className="font-semibold">Are you considering me for a role?</span> Feel free to visit the{" "}
+          <Link to="/for-recruiters" className="text-green-400 underline hover:text-green-300">
+            recruiter page
+          </Link>{" "}
+          I designed just for you!
+        </p>
       </div>
     </div>
   );
