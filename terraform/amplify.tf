@@ -3,13 +3,13 @@ resource "aws_amplify_app" "jeffjing" {
   repository = "https://github.com/JeffreyJing/jeffjing.dev"
   oauth_token = var.github_token
 
-    build_spec = <<YAML
+  build_spec = <<YAML
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - npm install
     build:
       commands:
         - npm run build
