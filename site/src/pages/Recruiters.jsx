@@ -98,7 +98,7 @@ If you have questions about my qualifications or background, feel free to ask aw
         All infra lives in AWS Free Tier — and yes, it’s fully reproducible via code on GitHub.
       </p>
       <a
-        href="https://github.com/yourusername/your-repo" // replace with real repo
+        href="https://github.com/JeffreyJing/jeffjing.dev/tree/main/terraform" 
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block text-blue-600 font-semibold underline hover:text-blue-800 transition"
