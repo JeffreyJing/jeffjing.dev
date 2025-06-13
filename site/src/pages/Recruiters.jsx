@@ -14,18 +14,13 @@ export default function Recruiters() {
   };
 
   const feedbackText = `Rejection letters are incredibly common in today's job market—especially given the current economic climate—but they almost always come in the form of generic, automated messages.
-
-As an applicant, it's frustrating to receive the same vague response hundreds of times, with no idea what went wrong. That's why I created this form!
-
-I'd genuinely appreciate your honest feedback. Whether I passed your resume screen or interview—or didn't—your thoughts are greatly appreciated.
-
-If you had a positive impression, feel free to share that too!`;
+    As an applicant, it's frustrating to receive the same vague response hundreds of times, with no idea what went wrong. That's why I created this form!
+    I'd genuinely appreciate your honest feedback. Whether I passed your resume screen or interview—or didn't—your thoughts are greatly appreciated.
+    If you had a positive impression, feel free to share that too!`;
 
   const llmText = `Resumes rarely tell the full story—especially when they're squeezed into a single page.
-
-Fortunately, this GPT-powered assistant has been trained on my full portfolio, resume, skills, education, and more.
-
-If you have questions about my qualifications or background, feel free to ask away.`;
+    Fortunately, this GPT-powered assistant has been trained on my full portfolio, resume, skills, education, and more.
+    If you have questions about my qualifications or background, feel free to ask away.`;
 
   return (
     <Layout>
@@ -64,52 +59,51 @@ If you have questions about my qualifications or background, feel free to ask aw
 
         {/* Combined Expandable White Block */}
         <div className="mt-16 w-full max-w-xl mx-auto bg-white text-black rounded-2xl shadow-lg overflow-hidden transition-all text-center">
-  <button
-    onClick={() => setShowDetails(!showDetails)}
-    className="w-full px-4 py-3 sm:px-6 sm:py-4 font-semibold text-base sm:text-lg hover:bg-gray-100 transition"
-  >
-    Curious how this page works under the hood?
-  </button>
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className="w-full px-4 py-3 sm:px-6 sm:py-4 font-semibold text-base sm:text-lg hover:bg-gray-100 transition"
+          >
+            Curious how this page works under the hood?
+          </button>
 
-  {showDetails && (
-    <div className="px-6 py-6 text-sm leading-relaxed space-y-4">
-      <p>
-        It’s built with <span className="font-semibold">React</span> and <span className="font-semibold">TailwindCSS</span> — frontend’s pretty straightforward.
-      </p>
-      <p>
-  But man, just take a look at{" "}
-  <a
-    href="https://github.com/JeffreyJing/jeffjing.dev/tree/dev/terraform"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-600 underline hover:text-blue-800"
-  >
-    the Terraform layout
-  </a>
-  .
-</p>
-      <p>
-        We’ve got two AWS Lambda functions — one handles feedback form submissions and stores them in S3, the other sends recruiter questions to OpenAI’s API using a vectorized <code className="bg-gray-200 px-1 py-0.5 rounded text-xs">data.jsonl</code> file.
-      </p>
-      <p>
-        Both are triggered through API Gateway. Everything’s wired up using Terraform — from IAM roles to policies to Lambda permissions.
-      </p>
-      <p>
-        All infra lives in AWS Free Tier — and yes, it’s fully reproducible via code on GitHub.
-      </p>
-      <a
-        href="https://github.com/JeffreyJing/jeffjing.dev/tree/main/terraform" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block text-blue-600 font-semibold underline hover:text-blue-800 transition"
-      >
-        🔗 View the full Terraform setup on GitHub →
-      </a>
+          {showDetails && (
+            <div className="px-6 py-6 text-sm leading-relaxed space-y-4">
+              <p>
+                It’s built with <span className="font-semibold">React</span> and <span className="font-semibold">TailwindCSS</span> — frontend’s pretty straightforward.
+              </p>
+              <p>
+                But man, just take a look at{" "}
+                <a
+                  href="https://github.com/JeffreyJing/jeffjing.dev/tree/dev/terraform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline hover:text-blue-800"
+                >
+                  the Terraform layout
+                </a>
+                .
+              </p>
+              <p>
+                We’ve got two AWS Lambda functions — one handles feedback form submissions and stores them in S3, the other sends recruiter questions to OpenAI’s API using a vectorized <code className="bg-gray-200 px-1 py-0.5 rounded text-xs">data.jsonl</code> file.
+              </p>
+              <p>
+                Both are triggered through API Gateway. Everything’s wired up using Terraform — from IAM roles to policies to Lambda permissions.
+              </p>
+              <p>
+                All infra lives in AWS Free Tier — and yes, it’s fully reproducible via code on GitHub.
+              </p>
+              <a
+                href="https://github.com/JeffreyJing/jeffjing.dev/tree/main/terraform" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-blue-600 font-semibold underline hover:text-blue-800 transition"
+              >
+                🔗 View the full Terraform setup on GitHub →
+              </a>
+            </div>
+          )}
+        </div>
     </div>
-  )}
-</div>
-
-      </div>
     </Layout>
   );
 }

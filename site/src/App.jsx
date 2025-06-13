@@ -37,7 +37,7 @@ export default function App() {
             </button>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex gap-6">
+            <div className="hidden md:flex gap-6 pr-4">
               {navLinks.map((link) => (
                 <NavItem key={link.to} to={link.to} label={link.label} />
               ))}
