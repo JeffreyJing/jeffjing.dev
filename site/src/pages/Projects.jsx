@@ -16,8 +16,22 @@ const projects = [
       </>
     ),
   },
+  
   {
     id: 2,
+    title: 'Terraform AWS Infra',
+    image: '/images/terraform-aws.webp',
+    description: (
+      <>
+        <p>Modular infrastructure-as-code for provisioning VPC, EC2, RDS, and EKS using Terraform. Includes dev & prod environments via separate tfvars.</p>
+        <div className="mt-2">
+          🔗 <a href="https://github.com/JeffreyJing/Terraform" target="_blank" className="underline text-green-400 hover:text-green-300">GitHub</a>
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 3,
     title: 'Minikube Dashboard',
     image: '/images/minikube-image.png',
     description: (
@@ -26,19 +40,6 @@ const projects = [
         <div className="mt-2">
           🔗 <a href="https://jeffreyjing.github.io/minikube-dashboard/" target="_blank" className="underline text-green-400 hover:text-green-300">Site</a>{' | '}
           <a href="https://github.com/JeffreyJing/minikube-dashboard?tab=readme-ov-file" target="_blank" className="underline text-green-400 hover:text-green-300">GitHub</a>
-        </div>
-      </>
-    ),
-  },
-  {
-    id: 3,
-    title: 'Terraform AWS Infra',
-    image: '/images/terraform-aws.webp',
-    description: (
-      <>
-        <p>Modular infrastructure-as-code for provisioning VPC, EC2, RDS, and EKS using Terraform. Includes dev & prod environments via separate tfvars.</p>
-        <div className="mt-2">
-          🔗 <a href="https://github.com/JeffreyJing/Terraform" target="_blank" className="underline text-green-400 hover:text-green-300">GitHub</a>
         </div>
       </>
     ),
@@ -56,6 +57,7 @@ const projects = [
       </>
     ),
   },
+  
 ];
 
 export default function ProjectsCarousel() {
