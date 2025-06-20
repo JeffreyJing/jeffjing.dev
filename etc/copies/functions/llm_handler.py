@@ -28,8 +28,8 @@ def handler(event, context):
         embed_resp = requests.post(
             "https://api.openai.com/v1/embeddings",
             headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
-            json={"input": question, "model": "text-embedding-ada-002"}
-        )
+            json={"input": question, "model": "text-embedding-ada-002"}, 
+        timeout=60)
         embed_resp.raise_for_status()
         query_vec = embed_resp.json()["data"][0]["embedding"]
 
@@ -47,8 +47,8 @@ def handler(event, context):
             json={
                 "model": "gpt-3.5-turbo",
                 "messages": [{"role": "user", "content": prompt}]
-            }
-        )
+            }, 
+        timeout=60)
         chat_resp.raise_for_status()
         answer = chat_resp.json()["choices"][0]["message"]["content"]
 
