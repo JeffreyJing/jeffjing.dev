@@ -10,7 +10,6 @@ export default function NavItem({ to, label }) {
     <NavLink
       to={to}
       className={({ isActive }) => `${base} ${isActive ? active : inactive}`}
-      style={{ color: isActive => (isActive ? undefined : "white") }}
     >
       {label}
     </NavLink>

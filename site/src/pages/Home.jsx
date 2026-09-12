@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
 
 export default function Home() {
   const [isMinimized, setIsMinimized] = useState(false);
   const [terminalSize, setTerminalSize] = useState("medium");
 
   const terminalSections = [
-    { label: 'echo $TITLE', lines: ['DevOps / Infrastructure / Automation Engineer'] },
-    { label: 'env | grep -i TOOLCHAIN', lines: ['ToolChain: Version Control, GitLab CI, GitHub Actions, TeamCity, Prometheus, Grafana, Docker'] },
-    { label: 'cat skills.txt', lines: ['Python', 'Java', 'Bash scripting', 'Linux'] },
-    { label: 'ls ~/projects | head -3', lines: ['minikube-dashboard', 'site-jeffjing.dev', 'EKS & RDS via Terraform'] },
-    { label: 'cat achievements.txt', lines: ["Bachelor's – University of Washington 2020", 'Certified Kubernetes Administrator (CKA)'] },
-    { label: 'cat upcoming_projects.txt', lines: ['1. Production-Grade K8s on AWS— real-world EKS deployment with Terraform, Prometheus, and Grafana', '2. K8s Unpacked— blog series K8s under the hood'] }
+    { label: 'echo $TITLE', lines: ['DevOps Engineer - Kubernetes, Cloud Infrastructure & AI/ML Ops'] },
+    { label: 'cat current_role.txt', lines: ['Ecoloai - DevOps Engineer (Jul 2025 – Present)', 'Running production Kubernetes, GPU inference pipelines (PyTorch/CUDA, ComfyUI), and the observability stack behind them'] },
+    { label: 'env | grep -i TOOLCHAIN', lines: ['ToolChain: Kubernetes, Helm, ArgoCD, Docker, Terraform, LocalStack, GitHub Actions, GitLab CI, Prometheus, Grafana, Loki'] },
+    { label: 'cat skills.txt', lines: ['DevOps: Kubernetes, Helm, Grafana, Prometheus, Docker, GitHub Actions, GitLab CI, Terraform, Loki', 'AWS: EC2, S3, Lambda, EKS, RDS, Fargate, Route53, Amplify, VPCs, IAM'] },
+    { label: 'cat work_history.txt', lines: ['Ecoloai - DevOps Engineer (2025–Present)', 'Castle Hill Gaming - DevOps Engineer (2023–2024)', 'Ethfinity Studios - Software/DevOps Engineer (2021–2023)'] },
+    { label: 'ls ~/projects | head -3', lines: ['site-jeffjing.dev', 'PokerNOWAI - EKS migration via Terraform', 'LancerPower - AWS + Amplify freelance build'] },
+    { label: 'cat achievements.txt', lines: ["Bachelor's – University of Washington, 2020", 'Certified Kubernetes Administrator (CKA) – Feb 2025'] }
   ];
 
   const handleResizeClick = () => {
@@ -25,10 +25,6 @@ export default function Home() {
     large: "w-full sm:max-w-lg md:max-w-2xl lg:max-w-4xl"
   };
 
-
-
-
-
   const sizeClasses = {
     small: "text-base px-2 pt-2 pb-1",
     medium: "text-xl px-3 pt-3 pb-2",
@@ -38,7 +34,12 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center pt-12 px-4">
       <h1 className="text-3xl font-bold text-center">Hi, I'm Jeffrey</h1>
-      <h2 className="text-3xl font-bold text-center mt-4">I'm a Kubernetes and AWS specialist.</h2>
+      <img
+        src="/images/pfp.png"
+        alt="Jeffrey Jing"
+        className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover mt-6 shadow-lg ring-2 ring-white/20"
+      />
+      <h2 className="text-3xl font-bold text-center mt-6">I'm a Kubernetes and AWS specialist.</h2>
 
       <div className={`bg-black text-green-400 font-mono mt-6 shadow-lg leading-relaxed mb-32 overflow-hidden ${widthClasses[terminalSize]} rounded-2xl`}>
         <div className={`flex items-center justify-start gap-2 px-4 h-8 bg-gray-200 ${isMinimized ? 'rounded-t-2xl rounded-b-none' : 'rounded-t-2xl'}`}>
@@ -69,8 +70,8 @@ export default function Home() {
       </div>
 
       <div className="bg-gray-900 text-white mt-[-24px] px-6 py-6 rounded-2xl shadow-lg w-full max-w-3xl text-xl leading-relaxed text-center mb-32">
-        <p className="mb-4">I specialize in building reliable, scalable infrastructure for modern cloud-native applications. I care about clean automation, robust CI/CD, and making things easy to maintain.</p>
-        <p className="mb-4 font-semibold">And yes, I am currently looking for a job in the space!</p>
+        <p className="mb-4">I specialize in building reliable, scalable infrastructure for modern cloud-native applications - clean automation, resilient CI/CD, and systems that are easy to maintain long after I've shipped them.</p>
+        <p className="mb-4 font-semibold">And yes, I'm actively seeking new opportunities in the DevOps and cloud infrastructure space!</p>
         <p className="mb-4">
           <a
             href="/resume.pdf"

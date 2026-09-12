@@ -13,12 +13,12 @@ export default function Recruiters() {
     setTimeout(() => setShowBanner(false), 3000);
   };
 
-  const feedbackText = `Rejection letters are incredibly common in today's job market—especially given the current economic climate—but they almost always come in the form of generic, automated messages.
+  const feedbackText = `Rejection letters are incredibly common in today's job market - especially given the current economic climate - but they almost always come in the form of generic, automated messages.
     As an applicant, it's frustrating to receive the same vague response hundreds of times, with no idea what went wrong. That's why I created this form!
-    I'd genuinely appreciate your honest feedback. Whether I passed your resume screen or interview—or didn't—your thoughts are greatly appreciated.
+    I'd genuinely appreciate your honest feedback. Whether I passed your resume screen or interview - or didn't - your thoughts are greatly appreciated.
     If you had a positive impression, feel free to share that too!`;
 
-  const llmText = `Resumes rarely tell the full story—especially when they're squeezed into a single page.
+  const llmText = `Resumes rarely tell the full story - especially when they're squeezed into a single page.
     Fortunately, this GPT-powered assistant has been trained on my full portfolio, resume, skills, education, and more.
     If you have questions about my qualifications or background, feel free to ask away.`;
 
@@ -69,7 +69,7 @@ export default function Recruiters() {
           {showDetails && (
             <div className="px-6 py-6 text-sm leading-relaxed space-y-4">
               <p>
-                It’s built with <span className="font-semibold">React</span> and <span className="font-semibold">TailwindCSS</span> — frontend’s pretty straightforward.
+                It’s built with <span className="font-semibold">React</span> and <span className="font-semibold">TailwindCSS</span> - frontend’s pretty straightforward.
               </p>
               <p>
                 But man, just take a look at{" "}
@@ -84,13 +84,13 @@ export default function Recruiters() {
                 .
               </p>
               <p>
-                We’ve got two AWS Lambda functions — one handles feedback form submissions and stores them in S3, the other sends recruiter questions to OpenAI’s API using a vectorized <code className="bg-gray-200 px-1 py-0.5 rounded text-xs">data.jsonl</code> file.
+                We’ve got two AWS Lambda functions - one handles feedback form submissions and stores them in S3, the other sends recruiter questions to OpenAI’s API using a vectorized <code className="bg-gray-200 px-1 py-0.5 rounded text-xs">data.jsonl</code> file.
               </p>
               <p>
-                Both are triggered through API Gateway. Everything’s wired up using Terraform — from IAM roles to policies to Lambda permissions.
+                Both are triggered through API Gateway. Everything’s wired up using Terraform - from IAM roles to policies to Lambda permissions.
               </p>
               <p>
-                All infra lives in AWS Free Tier — and yes, it’s fully reproducible via code on GitHub.
+                All infra lives in AWS Free Tier - and yes, it’s fully reproducible via code on GitHub.
               </p>
               <a
                 href="https://github.com/JeffreyJing/jeffjing.dev/tree/main/terraform" 

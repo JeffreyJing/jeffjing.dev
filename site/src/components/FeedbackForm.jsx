@@ -1,14 +1,17 @@
 import { useState } from "react";
+import { API_BASE } from "../config";
+
+const initialFormData = {
+  company: "",
+  resumeRating: "",
+  passedScreen: "",
+  improvements: "",
+  standout: "",
+  finalThoughts: "",
+};
 
 export default function FeedbackForm({ onSuccess }) {
-  const [formData, setFormData] = useState({
-    company: "",
-    resumeRating: "",
-    passedScreen: "",
-    improvements: "",
-    standout: "",
-    finalThoughts: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +21,7 @@ export default function FeedbackForm({ onSuccess }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://qc88e4b9mh.execute-api.us-east-1.amazonaws.com/prod/submit", {
+      const res = await fetch(`${API_BASE}/submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -26,18 +29,11 @@ export default function FeedbackForm({ onSuccess }) {
 
       if (res.ok) {
         onSuccess(); // Recruiters will handle the banner + flip
-        setFormData({
-          company: "",
-          resumeRating: "",
-          passedScreen: "",
-          improvements: "",
-          standout: "",
-          finalThoughts: "",
-        });
+        setFormData(initialFormData);
       } else {
         alert("Submission failed.");
       }
-    } catch (err) {
+    } catch {
       alert("Error submitting form.");
     }
   };

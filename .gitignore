@@ -2,3 +2,7 @@
 ./terraform/.terraform/terraform.tfstate
 terraform.tfstate.backup
 .terraform/
+*.jsonl
+*.zip
+./etc/*.jsonl
+./etc/*.zip

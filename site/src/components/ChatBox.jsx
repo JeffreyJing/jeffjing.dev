@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { API_BASE } from "../config";
 
 export default function ChatBox() {
   const [question, setQuestion] = useState("");
@@ -16,7 +17,7 @@ export default function ChatBox() {
     setQuestion("");
 
     try {
-      const res = await fetch("https://qc88e4b9mh.execute-api.us-east-1.amazonaws.com/prod/ask", {
+      const res = await fetch(`${API_BASE}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -24,7 +25,7 @@ export default function ChatBox() {
       const data = await res.json();
       const newBotMessage = { role: "assistant", content: data.answer };
       setChatHistory((prev) => [...prev, newBotMessage]);
-    } catch (err) {
+    } catch {
       setChatHistory((prev) => [...prev, { role: "assistant", content: "Sorry, something went wrong." }]);
     } finally {
       setLoading(false);
