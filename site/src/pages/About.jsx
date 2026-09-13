@@ -172,11 +172,10 @@ export default function About() {
       <div className="flex flex-col items-center pt-12 px-4 pb-24">
         <h1 className="text-4xl font-bold mb-4 text-center">About Me</h1>
         <p className="text-lg text-gray-300 max-w-2xl text-center mb-12">
-          Get to know me beyond the resume. Scroll through these panels for a peek at what actually
+          Get to know me beyond the resume! Scroll through these panels for a peek at what actually
           takes up my headspace outside of work - the albums on repeat, the games I've sunk way too
           many hours into, the movies I rewatch more than I probably should, and a few of the other
-          quirks and routines that make up the rest of me. This page is still growing, so check back
-          soon for more.
+          quirks and routines that make up the rest of me!
         </p>
 
         <div className="w-full max-w-3xl grid grid-cols-2 gap-4 sm:gap-6">
