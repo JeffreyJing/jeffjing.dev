@@ -35,9 +35,21 @@ def handler(event, context):
 
         context_chunks = get_top_k(np.array(query_vec))
         prompt = (
-            "Use the following context to answer the question:\n\n"
+            "Context about Jeffrey Jing:\n\n"
             + "\n\n".join(context_chunks)
             + f"\n\nQuestion: {question}"
+        )
+
+        system_prompt = (
+            "You are the assistant embedded on Jeffrey Jing's personal portfolio site, "
+            "speaking with recruiters and visitors. You only answer questions about "
+            "Jeffrey Jing - his work experience, skills, projects, and background - "
+            "using the provided context. You are not a general-purpose assistant: if "
+            "someone asks something unrelated to Jeffrey (general tech questions, "
+            "unrelated trivia, etc.), politely decline and steer the conversation back "
+            "to what they'd like to know about Jeffrey. If it's just a greeting, "
+            "respond briefly and warmly, then invite them to ask about Jeffrey's "
+            "experience, skills, or background."
         )
 
         # Call Chat API manually
@@ -46,7 +58,10 @@ def handler(event, context):
             headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
             json={
                 "model": "gpt-4o-mini",
-                "messages": [{"role": "user", "content": prompt}]
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt},
+                ]
             }
         )
         chat_resp.raise_for_status()
