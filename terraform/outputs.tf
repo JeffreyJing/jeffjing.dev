@@ -4,12 +4,12 @@ output "nameservers" {
 
 output "api_gateway_url" {
   description = "Invoke URL for form submissions"
-  value       = "${aws_api_gateway_rest_api.form_api.execution_arn}/prod"
+  value       = "${aws_api_gateway_stage.prod.invoke_url}/submit"
 }
 
 output "llm_api_url" {
   description = "Invoke URL for recruiter chat endpoint"
-  value       = "${aws_api_gateway_rest_api.form_api.execution_arn}/prod/ask"
+  value       = "${aws_api_gateway_stage.prod.invoke_url}/ask"
 }
 
 output "llm_lambda_hash" {

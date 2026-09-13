@@ -4,10 +4,10 @@ import json
 import os
 
 
-client = openai.OpenAI(api_key="key_was_here")
+client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 def embed_texts(texts):
     response = client.embeddings.create(
-        model="text-embedding-ada-002",
+        model="text-embedding-3-small",
         input=texts
     )
     return [d.embedding for d in response.data]
@@ -25,7 +25,7 @@ all_data = []
 current_working_directory = os.getcwd()
 print(current_working_directory)
 
-for path in ["copies/data/resume.txt", "copies/data/projects.txt", "copies/data/skills.txt"]:
+for path in ["copies/data/resume.txt", "copies/data/projects.txt", "copies/data/skills.txt", "copies/data/pokemon.txt"]:
     all_data.extend(process_file(path))
 
 with open("data.jsonl", "w") as out:

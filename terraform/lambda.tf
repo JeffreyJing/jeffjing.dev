@@ -17,6 +17,11 @@ resource "aws_lambda_function" "form_handler" {
   timeout = 10
 }
 
+resource "aws_cloudwatch_log_group" "form_handler_logs" {
+  name              = "/aws/lambda/${aws_lambda_function.form_handler.function_name}"
+  retention_in_days = 30
+}
+
 resource "aws_lambda_permission" "form_apigw_invoke" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
@@ -42,4 +47,9 @@ resource "aws_lambda_function" "llm_handler" {
   }
 
   timeout = 10
+}
+
+resource "aws_cloudwatch_log_group" "llm_handler_logs" {
+  name              = "/aws/lambda/${aws_lambda_function.llm_handler.function_name}"
+  retention_in_days = 30
 }

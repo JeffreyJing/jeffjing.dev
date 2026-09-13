@@ -1,103 +1,29 @@
-JEFFREY JING  
-DevOps Engineer | Cloud Infrastructure Specialist | Certified Kubernetes Administrator (CKA)  
-Phone: 626-241-8731 | Email: jjingdn@gmail.com | LinkedIn: linkedin.com/in/jeffrey-jing97  
+JEFFREY JING
+DevOps Engineer | Cloud Infrastructure Specialist | Certified Kubernetes Administrator (CKA)
+Phone: 626-241-8731 | Email: jjingdn@gmail.com | jeffrey@ecoloai.com | LinkedIn: linkedin.com/in/jeffrey-jing97
 
----
+Jeffrey Jing's current job and employer is Ecoloai, where he works full-time as a DevOps Engineer (July 2025 to Present). This is his primary profession and full-time employment in the software and cloud infrastructure industry.
 
-🏫 EDUCATION  
-University of Washington – Seattle, WA  
-Bachelor of Arts in Geographic Information Systems (GIS), June 2020  
-- Completed rigorous coursework in Computer Science (CSE 142, 143, 331, 341, 351, 374)  
-- Classically trained in Java; it remains my primary language for problem solving and design thinking  
+EDUCATION & CERTIFICATIONS
+University of Washington, Seattle, WA - graduated June 2020.
+Certified Kubernetes Administrator (CKA), issued by the Linux Foundation, February 2025.
 
----
+Ecoloai - DevOps Engineer, Remote, July 2025 to Present.
+Kubernetes Infrastructure: Deployed and operated production applications on bare-metal Kubernetes, managing frontend/backend services, MongoDB, Redis, and MinIO stateful workloads, NGINX ingress/routing, and Helm/ArgoCD deployments across production and staging.
+GPU Container Orchestration & AI Inference: Built GPU-enabled Docker Compose stacks with PyTorch/CUDA images and NVIDIA Container Toolkit; troubleshot driver/CUDA/PyTorch compatibility and aggregated models/assets from Hugging Face, GitHub, and external repositories for ComfyUI image/video inference.
+Kubernetes Observability: Built a production Prometheus/Grafana/Loki stack; deployed Alloy DaemonSets for dynamic Kubernetes log collection, instrumented Redis, MongoDB, and MinIO metrics, and engineered Grafana dashboards and Telegram alerting for application/middleware health.
+Custom Monitoring Systems: Engineered Python systemd monitoring for production services that track MongoDB latency, RabbitMQ redeliveries, and ComfyUI consumer pipelines, alerting via Telegram.
 
-🎓 CERTIFICATIONS  
-• Certified Kubernetes Administrator (CKA), issued February 2025  
+Castle Hill Gaming - DevOps Engineer, Charlottesville, VA, 2023 to 2024.
+Automated QA & Internal Tooling: Built a centralized test repo with a RESTful endpoint and Git webhooks for CI test discovery; added a Jira-integrated QA submission form and a hardware lab checkout system.
+Docker Initiative & CI/CD: Containerized legacy test environments into versioned Docker images on ECR; migrated CI from GitHub to GitLab on TeamCity with scalable EC2 build agents.
+Grafana & Prometheus: Deployed Prometheus and Grafana on EC2 with custom exporters and scrape configs for live metrics, dashboards, and alerting.
+Cloud Infrastructure Optimization: Used Terraform to decommission unused resources and consolidate S3, cutting AWS costs by over 60%; built a Lambda pipeline ingesting roughly 1TB per day to S3.
 
----
+Ethfinity Studios - Software & DevOps Engineer, Seattle, WA, 2021 to 2023.
+Provisioned AWS infrastructure with Terraform (EC2, VPCs, security groups); containerized backend services with Docker/ECR; integrated the Moralis Web3 JSON-RPC API for smart contract interaction.
+Deployed ERC721 and ERC721B Solidity contracts with re-entrancy guards; tested on the Rinkeby testnet, migrated to Ethereum mainnet with contract verification and gas optimization.
 
-💼 EXPERIENCE  
-
-🔹 CASTLE HILL GAMING | DevOps Engineer  
-Charlottesville, VA | 2023 – 2024  
-
-- Automated management of Gherkin-based QA test repositories by building a centralized, queryable Flask API with webhook-driven sync logic. Eliminated manual repo versioning and enabled developers to retrieve the latest test sets dynamically during CI runs.
-- Spearheaded an internal Docker migration to replace the legacy pattern of packaging custom binaries per EC2 instance. Designed reproducible, containerized development environments that dramatically reduced costs, onboarding time, and configuration drift.
-- Manually deployed Prometheus + Grafana on each EC2 instance (no Kubernetes used); installed and configured Node Exporters, set up scrape targets, and built real-time dashboards for system observability and performance alerts.
-- Built a reusable Microsoft Teams bot using OAuth 2.0 and Microsoft Graph API to deliver build results, Git status, and test errors to Teams channels. The bot was adopted company-wide and improved visibility into CI/CD health.
-- Created a reservation interface for managing physical Electronic Gaming Machines (EGMs) using Flask, Apache2, and Python-based SVGs for interactive layouts. Enabled QA engineers to visually book hardware and track availability in real time.
-- Launched a Dropbox + EC2 cost-cutting initiative that identified unused storage and over-provisioned compute nodes. Redesigned resource allocation and archive retention policies, cutting infrastructure spend by over 65%.
-- Investigated a runaway EC2 test instance that had been duplicating 20TB/day of production and staging data into S3 for over a year. Wrote a corrective ingestion script and a deduplication process that purged over 100TB of redundant storage, restoring system integrity and halting wasteful cronjobs.
-- Managed CI/CD using TeamCity across Windows-hosted EC2 build agents. Gained deep familiarity with how ephemeral agents integrate with GitLab and GitHub triggers. Rebuilt pipeline triggers and webhooks during a company-wide GitHub → GitLab migration with zero downtime.
-- Replicated a Jenkins-based build pipeline for self-study to contrast CI platforms. Though not used in production, this project enhanced theoretical knowledge of Jenkins node orchestration and job lifecycle patterns.
-- Built a frontend+backend QA Test Submission tool using Flask (Python), JavaScript, and custom CSS. Allowed developers to submit bug reports and test artifacts directly to QA, which auto-logged into Jira through API integration, improving ticket hygiene and triage speed.
-
----
-
-🔹 ETHFINITY STUDIOS | Software & DevOps Engineer  
-Seattle, WA | 2021 – 2023  
-
-- Acted as CEO and project lead for Metapengus, a large-scale NFT launch on Ethereum. Directed all aspects of the project: smart contract architecture, website development, marketing strategy, community building, and art production.
-- Personally sourced, onboarded, and coordinated contractors across smart contract development, frontend work, community moderation, and outreach; led the team from concept to execution.
-- Taught myself Photoshop from scratch to design the full art collection, including base layers and randomized traits for 1,000+ NFTs — an intense, hands-on process blending creativity with generative logic.
-- Built the smart contracts in Solidity (ERC721 and custom logic) and was fully responsible for testing using Hardhat and Chai. Handled all deployment and contract verification.
-- Created the minting frontend and integrated Web3 wallet functionality using React and ethers.js; hosted the app on AWS (S3 + CloudFront).
-- Personally developed the community Discord from the ground up, implemented bot automations, and recruited a trusted mod team to manage growth and community engagement.
-- Devised a targeted marketing campaign across Twitter, Discord, and NFT forums, helping generate hype and sustain momentum during the mint.
-- Oversaw launch operations, from technical stress testing to community Q&A, ensuring a smooth rollout and high user confidence.
-- Contributed to additional projects under Ethfinity Studios, including Deck of Degeneracy and others, supporting smart contract development, site deployment, and post-launch maintenance.
-
----
-
-🔹 PATHWARE | Software Development Engineer Intern  
-Seattle, WA | 2020  
-
-- Wrote a Python-based parser for Doxygen documentation to streamline codebase annotation and improve internal documentation reliability.
-- Built an advanced image processing module in C++ and Java to support Fourier Ptychographic Microscopy (FPM) — implemented novel reconstruction algorithms to enhance image fidelity for medical and scientific applications.
-
----
-
-🧠 SKILLS & TECHNOLOGIES  
-
-☁ DevOps / Cloud / Automation  
-- **Kubernetes**: Used EKS for production-level deployments and Minikube for local testing. Comfortable with manifest authoring, RBAC, and Helm/Kustomize templating.  
-- **Helm & Kustomize**: Used to manage layered K8s configurations across dev/staging/prod.  
-- **Docker**: Containerized legacy internal tools and developer environments to streamline CI pipelines and enforce consistency across machines.  
-- **CI/CD**: Managed TeamCity pipelines with EC2 agents, integrated GitHub Actions for lightweight jobs, and built GitLab CI pipelines with webhook triggers.  
-- **AWS**:  
-  - EC2: Deployed monitoring, CI agents, and workloads  
-  - S3: Hosted NFT assets and data pipelines  
-  - Lambda: Built serverless APIs for form handling  
-  - RDS: Used for PostgreSQL in infrastructure-as-code setups  
-  - Amplify: Hosted personal React portfolio with domain + certs  
-  - Route 53: Managed DNS for jeffjing.dev  
-  - CloudFront: Delivered static frontends  
-  - IAM: Configured least-privilege roles across services  
-- **Terraform**: Used daily for provisioning infrastructure (EKS, RDS, Lambda, IAM, etc.); comfortable with modules, remote state, and environment branching.  
-- **Prometheus & Grafana**: Installed from scratch on EC2 (non-K8s). Manually set up Node Exporters and scrape configs; built real-time dashboards.  
-- **Flask & Apache2**: Built multiple internal web apps (hardware checkout, QA form) with REST endpoints and lightweight HTML+JS interfaces.  
-
-💻 Programming & Scripting Languages  
-- **Java**: Classically trained; primary language for systems thinking  
-- **Python**: Used across internal tools, APIs, and automation scripts  
-- **Bash**: Daily usage for scripting and server-side automation  
-- **Solidity**: Authored smart contracts with custom logic  
-- **C++**: Used in imaging research context  
-
-🔧 Tools & Platforms  
-- Git, GitHub, GitLab, Jira, Remix IDE, Hardhat, Doxygen, Microsoft Graph API, Jenkins (theoretical)
-
-🏅 Strengths  
-- Designs resilient cloud-native infrastructure  
-- Obsessed with reducing developer friction via automation  
-- Learns new tools rapidly and applies them in production  
-- Operates across DevOps, backend, infra, QA, and smart contracts  
-
----
-
-🌐 Projects & Personal Initiatives  
-[See `projects.txt` for detailed descriptions]  
-- Terraform-based EKS & RDS deployment  
-- Personal site with RAG-powered recruiter assistant (jeffjing.dev)  
-- GitHub-hosted K8s dashboard project (minikube-dashboard)
+SKILLS
+DevOps: Kubernetes, Helm, Grafana, Prometheus, Docker, GitHub Actions, GitLab CI, Terraform, Claude, Loki.
+AWS: EC2, S3, Lambda, EKS, RDS, Fargate, Route53, Amplify, VPCs, IAM.
