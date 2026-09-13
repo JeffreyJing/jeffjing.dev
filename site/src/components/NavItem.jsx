@@ -1,17 +1,32 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export default function NavItem({ to, label }) {
-  const base =
-    "px-4 py-2 rounded font-extrabold text-xl transition-all duration-200";
-  const active = "bg-white text-black";
-  const inactive = "text-white hover:bg-white/10";
-
+export default function NavItem({ to, label, onClick, end, layoutId = "nav-pill" }) {
   return (
     <NavLink
       to={to}
-      className={({ isActive }) => `${base} ${isActive ? active : inactive}`}
+      end={end}
+      onClick={onClick}
+      className="relative block text-center px-4 py-2 rounded-full font-extrabold text-lg"
     >
-      {label}
+      {({ isActive }) => (
+        <>
+          {isActive && (
+            <motion.span
+              layoutId={layoutId}
+              className="absolute inset-0 bg-white rounded-full"
+              transition={{ type: "spring", stiffness: 380, damping: 32 }}
+            />
+          )}
+          <span
+            className={`relative z-10 transition-colors duration-200 ${
+              isActive ? "text-black" : "text-white/80 hover:text-white"
+            }`}
+          >
+            {label}
+          </span>
+        </>
+      )}
     </NavLink>
   );
 }

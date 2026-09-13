@@ -117,7 +117,8 @@ export default function About() {
         { embed: "https://open.spotify.com/embed/album/0ValflNlWce21wm5PlwV60?utm_source=generator&si=7258ee74dad54fc4" },
         { embed: "https://open.spotify.com/embed/album/60xcVwuQJAOyu11xf9mObS?utm_source=generator&si=c8b73016de6b45b9" },
         { embed: "https://open.spotify.com/embed/album/7gsWAHLeT0w7es6FofOXk1?utm_source=generator&si=6a95089efd174f78" },
-        { embed: "https://open.spotify.com/embed/playlist/1VWkH7RUhVVYN713uz1Evt?utm_source=generator&si=228b906e4ad74ce5" },
+        { embed: "https://open.spotify.com/embed/album/20r762YmB5HeofjMCiPMLv?utm_source=generator&si=0760487197af4bee" },
+        { embed: "https://open.spotify.com/embed/playlist/6KzhO8rcfWZ1xQ70pUnZLL?utm_source=generator&si=c73c89db28d34778" },
       ],
     },
     {
@@ -221,15 +222,6 @@ export default function About() {
                 </>
               )}
             </motion.div>
-          ))}
-
-          {Array.from({ length: Math.max(0, 8 - sections.length) }).map((_, i) => (
-            <div
-              key={`placeholder-${i}`}
-              className="rounded-3xl aspect-[3/4] border-2 border-dashed border-gray-700 flex items-center justify-center text-center text-gray-500 text-sm sm:text-base p-4"
-            >
-              More topics coming soon
-            </div>
           ))}
         </div>
       </div>
