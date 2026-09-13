@@ -141,8 +141,8 @@ export default function About() {
     },
     {
       id: "movies",
-      title: "🍿 Movies",
-      emoji: "🍿",
+      title: "🎬 Movies",
+      emoji: "🎬",
       image: movieItems[0]?.image,
       content: "Favorite director: Nolan. Movies these days just aren't as good as what they used to be, so I find myself rewatching a lot of films from the 1990-2020 era.",
       items: movieItems,
@@ -158,10 +158,10 @@ export default function About() {
     },
     {
       id: "gym",
-      title: "💪 Gym Schedule",
-      emoji: "💪",
-      image: "/images/about/gym.jpg",
-      content: "Back, chest, legs, shoulders, arms. Monday to Friday. Eating clean, ground turkey every meal right now!",
+      title: "🏋️ Gym Schedule",
+      emoji: "🏋️",
+      image: "/images/LA-Fitness.jpg",
+      content: "I go to the gym 5 days a week - my preferred routine is chest, back, legs, shoulders, and arms Monday through Friday, with cardio on Saturdays. It's an integral part of who I am: I've been working out for 10 years, and I was also a personal fitness trainer at LA Fitness!",
       items: [],
     },
   ];
@@ -179,7 +179,7 @@ export default function About() {
           quirks and routines that make up the rest of me!
         </p>
 
-        <div className="w-full max-w-3xl grid grid-cols-2 gap-4 sm:gap-6">
+        <div className="w-full max-w-[1344px] grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8">
           {sections.map(({ id, title, image, emoji, icon }) => (
             <motion.div
               key={id}
@@ -191,12 +191,12 @@ export default function About() {
               className="relative overflow-hidden rounded-3xl aspect-[3/4] cursor-pointer shadow-xl bg-gradient-to-br from-gray-700 to-gray-900"
             >
               {emoji ? (
-                <div className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl">
+                <div className="absolute inset-0 flex items-center justify-center text-8xl sm:text-9xl">
                   {emoji}
                 </div>
               ) : icon ? (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src={icon} alt={title} className="w-20 h-20 sm:w-24 sm:h-24 object-contain" />
+                  <img src={icon} alt={title} className="w-28 h-28 sm:w-32 sm:h-32 object-contain" />
                 </div>
               ) : (
                 <>
